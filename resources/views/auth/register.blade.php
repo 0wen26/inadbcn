@@ -61,18 +61,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="empresa" class="col-md-4 col-form-label text-md-right">{{ __('empresa') }}</label>
-
-                            <div class="col-md-6">
-                                <select class="form-select" aria-label="Default select example" id="empresa" name="empresa">
-                                    <option value="ICTS" selected>ICTS</option>
-                                    <option value="Segurisa">Segurisa</option>
-                                    <option value="Trablisa">Trablisa</option>
-                                    <option value="Ariete">Ariete</option>
-                                  </select>
-                            </div>
-                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
