@@ -39,25 +39,41 @@
                     <li><a href="#" class="nav-item nav-link">Sugerencias</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    < class="nav navbar-nav navbar-right">
-                        <li class="nav-item nav-link">{{ Auth::user()->name }}</li>
-                        <li><a href="{{ route('register') }}"  class="nav-item nav-link">{{ __('Register') }}</a></li>
-              </ </ul>
-                            </div> </div> </nav> <div class="container text-center">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="well">
-                                    @yield('contenido')
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-                                </div>
-                            </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
 
                         </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well">
+                    @yield('contenido')
+
+                </div>
             </div>
 
-            <footer class="container-fluid text-center">
+        </div>
+    </div>
 
-            </footer>
+    <footer class="container-fluid text-center">
+
+    </footer>
 
 </body>
 

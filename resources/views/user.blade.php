@@ -1,3 +1,5 @@
-@include('layouts.head')
-@include('layouts.menuLog')
-@include('layouts.body')
+@extends('layouts.plantillaN')
+
+@section('contenido')
+
+@endsection

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Helpers\Helper;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,16 +21,24 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-     public function indexes()
+    public function indexes()
     {
-            return view('/home');
+        return view('/home');
     }
     public function admin()
     {
-            return view('admin');
+        return view('admin');
     }
     public function icts()
     {
-            return view('user');
+        return view('user');
+    }
+    public function Llegadas()
+    {
+        # code...
+        $infoTiempos = Helper::civilizaciones();
+        $info =json_decode($infoTiempos,true);
+
+        return view('admin', compact('info'));
     }
 }
