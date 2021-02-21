@@ -8,7 +8,7 @@ class Departure extends Model
 {
     //
     protected $table ="departures";
-    protected $fillable= ['airline','numeroVuelo','hora','dia','destino'];
+    protected $fillable= ['numeroVuelo','hora','dia','destino'];
 
     public function ictsInadmitidos()
     {
@@ -18,4 +18,9 @@ class Departure extends Model
     {
         return $this->belongsTo('App\inadmitido');
     }
+    public function airlines()
+    {
+        return $this->hasMany('App\Airline');
+    }
+
 }

@@ -18,4 +18,12 @@ class Airline extends Model
     {
         return $this->belongsTo('App\inadmitido');
     }
+    public function departures()
+    {
+        return $this->belongsTo('App\departure');
+    }
+    public function arrivals()
+    {
+        return $this->belongsTo('App\Arrival');
+    }
 }

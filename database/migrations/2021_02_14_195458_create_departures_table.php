@@ -15,12 +15,15 @@ class CreateDeparturesTable extends Migration
     {
         Schema::create('departures', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->string('compania');
+            $table->integer('id_airline')->unsigned();
+            $table->string('airline');
             $table->string('numeroVuelo');
             $table->time('hora');
             $table->string('diaSemana');
             $table->string('destino');
             $table->timestamps();
+
+            $table->foreign('id_airline')->references('id')->on('airlines')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
