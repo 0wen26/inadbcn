@@ -1,7 +1,7 @@
 @extends('layouts.plantillaL')
 
 @section('contenido')
-<h1>Inadmitidos ICTS</h1>
+<h1>INADMITIDOS ICTS</h1>
 <div class="table-responsive">
     <table class="table  table-bordered ">
         <thead>
@@ -26,7 +26,7 @@
                     <td>{{$item['airline']}}</td>
                     <td>{{$item['numExp']}}</td>
                     <td>{{$item['fEntrada']}}</td>
-                    <td>{{$item['numExp']}}</td>
+                    <td>{{$item['hEntrad']}}</td>
                     <td>{{$item['vSalida']}}</td>
                     <td>{{$item['feSalida']}}</td>
                     <td>{{$item['hSalida']}}</td>

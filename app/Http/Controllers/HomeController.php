@@ -48,4 +48,19 @@ class HomeController extends Controller
          //dd($infoTiempos);
          return view('inadIcts', compact('inadIcts'));
     }
+    public function llegadasVu(){
+        # code...
+        $lleg = Helper::llegadasVu();
+        $vuLleg =json_decode($lleg,true);
+        //dd($infoTiempos);
+        return view('llegadas', compact('vuLleg'));
+   }
+   public function salidasVu(){
+    # code...
+    $sal = Helper::salidasVu();
+    $vuSal =json_decode($sal,true);
+    //dd($infoTiempos);
+    return view('salidas', compact('vuSal'));
 }
+}
+

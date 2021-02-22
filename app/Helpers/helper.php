@@ -28,8 +28,26 @@ class Helper
         ->where('users.id','=','1')
         ->addSelect(['users.name as name','ictsinadmitidos.airline as airline','ictsinadmitidos.numExpediente as numExp','ictsinadmitidos.nombre as nombreInad',
         'ictsinadmitidos.fechaEntrada as feEmtrada','ictsinadmitidos.fechaSalida as feSalida','ictsinadmitidos.horaSalida as hSalida',
-        'ictsinadmitidos.vueloSalida as vSalida','ictsinadmitidos.numCustodia as cust','ictsinadmitidos.fechaEntrada as fEntrada','ictsinadmitidos.horaRealSalida as HRSal','ictsinadmitidos.observaciones as obs'])
+        'ictsinadmitidos.vueloSalida as vSalida','ictsinadmitidos.numCustodia as cust','ictsinadmitidos.fechaEntrada as fEntrada','ictsinadmitidos.horaRealSalida as HRSal','ictsinadmitidos.observaciones as obs',
+            'ictsinadmitidos.horaEntrada as hEntrad'])
         ->get();
+
+        $jsonString =json_encode($users);
+        return $jsonString;
+    }
+
+    public static function llegadasVu()
+    {
+         //obtenemos todos los usuarios
+         $users = DB::table('arrivals')->get();
+
+         $jsonString =json_encode($users);
+         return $jsonString;
+    }
+    public static function salidasVu()
+    {
+        //obtenemos todos los usuarios
+        $users = DB::table('departures')->get();
 
         $jsonString =json_encode($users);
         return $jsonString;
