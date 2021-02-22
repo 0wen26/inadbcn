@@ -59,7 +59,7 @@
             </div>
         </div>
     </nav>
-    <div class="container text-center">
+    <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12">
                 <div class="well">

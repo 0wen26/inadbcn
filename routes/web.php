@@ -22,6 +22,8 @@ Auth::routes();
 //Auth::routes();
 Route::group(['middleware'=>'admin'],function(){
 	Route::get('/admin', 'HomeController@llegadas')->name('admin');
+    Route::get('/inad', 'HomeController@inadmitidos')->name('inad');
+    Route::get('/inadIcts', 'HomeController@inadIcts')->name('inadIcts');
 });
 Route::group(['middleware'=>'icts'],function(){
 	Route::get('/icts', 'HomeController@icts')->name('icts');

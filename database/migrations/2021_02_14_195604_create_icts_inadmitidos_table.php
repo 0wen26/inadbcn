@@ -27,7 +27,7 @@ class CreateIctsInadmitidosTable extends Migration
             $table->time('horaSalida');
             $table->time('horaRealSalida');
             $table->string('vueloSalida');
-            $table->string('observaciones');
+            $table->time('horaEntrada');
             $table->timestamps();
             //referencias
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

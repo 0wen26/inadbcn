@@ -1,25 +1,26 @@
 @extends('layouts.plantillaL')
 
 @section('contenido')
-<h1>Llegadas</h1>
+<h1>INADMITIDOS</h1>
 <div class="table-responsive">
     <table class="table  table-bordered ">
         <thead>
             <tr>
-                <th>N Asist</th>
-                <th>Comp Aerea</th>
-                <th>N Exp</th>
-                <th>F Entrada</th>
-                <th>H Entrada</th>
+                <th>Exp</th>
+                <th>Inad</th>
+                <th>Compañia</th>
+                <th>F Sal</th>
+                <th>H Sal</th>
                 <th>V Salida</th>
-                <th>F Salida</th>
-                <th>H Real Salida</th>
-                <th>Nom Pasajero</th>
+                <th>compSeg</th>
+                <th>Menor</th>
+                <th>Pert</th>
+                <th>Sala</th>
             </tr>
         </thead>
         <tbody id="LLegadas">
             <tr>
-                @forelse ($info as $item)
+                @forelse ($inad as $item)
                 <tr>
 
                     <td>{{$item['numExp']}}</td>
@@ -32,7 +33,6 @@
                     <td>{{$item['menor']}}</td>
                     <td>{{$item['pertenencias']}}</td>
                     <td>{{$item['sala']}}</td>
-                    <td>{{$item['user']}}</td>
                 </tr>
 
                 @empty

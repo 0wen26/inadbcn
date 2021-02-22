@@ -33,12 +33,19 @@ class HomeController extends Controller
     {
         return view('user');
     }
-    public function Llegadas()
+    public function inadmitidos()
     {
         # code...
-        $infoTiempos = Helper::civilizaciones();
-        $info =json_decode($infoTiempos,true);
-
-        return view('admin', compact('info'));
+        $inadmitidos = Helper::inadmitidos();
+        $inad =json_decode($inadmitidos,true);
+        //dd($infoTiempos);
+        return view('Inad', compact('inad'));
+    }
+    public function inadIcts(){
+         # code...
+         $inadmitidos = Helper::inadmitidosIcts();
+         $inadIcts =json_decode($inadmitidos,true);
+         //dd($infoTiempos);
+         return view('inadIcts', compact('inadIcts'));
     }
 }

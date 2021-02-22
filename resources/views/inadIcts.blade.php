@@ -1,7 +1,7 @@
 @extends('layouts.plantillaL')
 
 @section('contenido')
-<h1>Llegadas</h1>
+<h1>Inadmitidos ICTS</h1>
 <div class="table-responsive">
     <table class="table  table-bordered ">
         <thead>
@@ -13,26 +13,25 @@
                 <th>H Entrada</th>
                 <th>V Salida</th>
                 <th>F Salida</th>
+                <th>Hora Salida</th>
                 <th>H Real Salida</th>
                 <th>Nom Pasajero</th>
             </tr>
         </thead>
         <tbody id="LLegadas">
             <tr>
-                @forelse ($info as $item)
+                @forelse ($inadIcts as $item)
                 <tr>
-
-                    <td>{{$item['numExp']}}</td>
-                    <td>{{$item['nombreInad']}}</td>
+                    <td>{{$item['cust']}}</td>
                     <td>{{$item['airline']}}</td>
+                    <td>{{$item['numExp']}}</td>
+                    <td>{{$item['fEntrada']}}</td>
+                    <td>{{$item['numExp']}}</td>
+                    <td>{{$item['vSalida']}}</td>
                     <td>{{$item['feSalida']}}</td>
                     <td>{{$item['hSalida']}}</td>
-                    <td>{{$item['vSalida']}}</td>
-                    <td>{{$item['security']}}</td>
-                    <td>{{$item['menor']}}</td>
-                    <td>{{$item['pertenencias']}}</td>
-                    <td>{{$item['sala']}}</td>
-                    <td>{{$item['user']}}</td>
+                    <td>{{$item['HRSal']}}</td>
+                    <td>{{$item['nombreInad']}}</td>
                 </tr>
 
                 @empty

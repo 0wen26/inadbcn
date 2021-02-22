@@ -8,7 +8,7 @@ class IctsInadmitido extends Model
 {
     //
     protected $table ="ictsInadmitidos";
-    protected $fillable =['numCustodia','airline','fechaEntrada','fechaSalida','horaSalida','horaRealSalida','vueloSalida','observaciones'];
+    protected $fillable =['numCustodia','airline','fechaEntrada','fechaSalida','horaSalida','horaRealSalida','vueloSalida','observaciones','horaEntrada'];
 
     public function users()
     {
