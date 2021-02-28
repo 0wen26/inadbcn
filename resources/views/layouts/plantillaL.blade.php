@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    @yield('css')
     <style>
         /* Set black background color, white text and some padding */
         footer {
@@ -62,6 +63,12 @@
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12">
+                @yield('insert')
+
+            </div>
+
+
+            <div class="col-sm-12">
                 <div class="well">
                     @yield('contenido')
 
@@ -74,7 +81,11 @@
     <footer class="container-fluid text-center">
 
     </footer>
-
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+    @yield('js')
 </body>
 
 </html>
